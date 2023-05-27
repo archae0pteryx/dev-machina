@@ -1,0 +1,17 @@
+name: Test on OSX
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+
+      - name: install dependencies
+        run: pip install ansible
+
+      - name: run ansible playbook
+        run: ansible-playbook ansible/playbook.yml
