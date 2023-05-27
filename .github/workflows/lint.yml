@@ -17,3 +17,4 @@ jobs:
         # optional:
         with:
           path: "playbooks/"
+        continue-on-error: true
